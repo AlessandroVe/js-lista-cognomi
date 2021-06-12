@@ -12,6 +12,7 @@ var surname = prompt("inserisci qui il tuo cognome");
 /* inseriscilo in un array dove sono presenti già altri cognomi: ‘Bianchi’, ‘Neri’, ‘Rossi’, ‘Verdi’, ‘Gialli’  */
 var regedit=["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 
+
 regedit.push(surname);
 //3. stampa la lista ordinata alfabeticamente
 function confrontaS(a,b) {
@@ -30,6 +31,6 @@ console.log(regedit.sort(confrontaS));
 //4. scrivi anche la posizione “umana” (partendo da 1) della lista in cui il nuovo utente si trova
 
 for(i=0; i < regedit.length; i++){
-    var indice = i + 1;
+    var indice =(regedit.indexOf(regedit[i])+1);
     ul.innerHTML += "<li>" + regedit[i] + " " + indice + "</li>";
 }
